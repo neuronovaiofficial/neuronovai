@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%zklz)2ffdh#5xbt!(w^s+w7w)p^!(5luiql0+k^ethrw(9*tk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['neuronovai.onrender.com', 'www.neuronovai.com']
 
 
 # Application definition
