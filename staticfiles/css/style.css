@@ -1,0 +1,153 @@
+/* Tam sayfa boyu ayarı */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Flex yapısı: içerik uzasa da footer en altta */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #0b0c10;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 100px !important;
+    width: auto;
+    object-fit: contain;
+    transition: height 0.3s ease;
+    border-radius: 100px;
+}
+
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #66fcf1;
+}
+
+/* Ana içerik */
+.main-content {
+    flex: 1; /* boşluk bırakır */
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #0b0c10;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #FFC94A;
+    text-shadow:
+        0 0 6px #FFC94A,
+        0 0 12px #FFD700,
+        0 0 18px #FFE066,
+        0 0 24px #FFF2B2;
+    animation: sunPulse 2.5s ease-in-out infinite;
+}
+
+
+/* Sabit footer */
+.footer {
+    background-color: #0b0c10;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: auto; /* footer'ı alta iter */
+}
+
+.footer a {
+    color: #66fcf1;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil uyum için media query */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background-color: #0b0c10;
+        border-top: 1px solid #222;
+    }
+
+.main-content {
+    flex: 1;
+    padding-top: 1rem;       /* Yukarıdan boşluğu azalttık */
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+    }
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'academic/academic.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <h3 style="text-align:center;">Selected Research Highlights</h3>
+    <div class="card-grid">
+        {% for card in cards %}
+        <div class="card">
+            <img src="{{ card.image.url }}" alt="{{ card.title }}" style="width:100%; border-radius:8px;">
+            <h4>{{ card.title }}</h4>
+            <p>{{ card.description }}</p>
+            {% if card.link %}
+            <a href="{{ card.link }}" target="_blank">🔗 Read More</a>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p style="text-align:center;">Hiç kart bulunamadı.</p>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,76 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Kart minimum genişliği artırıldı */
+    gap: 2rem;
+    margin: 2rem auto; /* Üstten boşluk ve sayfa ortalama */
+    width: 100%;
+    max-width: 1400px; /* Maksimum kapsayıcı genişliği artırıldı */
+    padding: 0 2rem; /* Sağ/sol boşluk biraz artırıldı */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;               /* Biraz daha geniş alan tanıyalım */
+    object-fit: cover;           /* Oranı koruyarak taşmaları kırpar */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem auto;    /* Ortalamayı garantiler */
+}
+
+
+.card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #0b0c10;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
