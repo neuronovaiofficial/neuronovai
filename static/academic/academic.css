@@ -28,11 +28,11 @@
 
 .card img {
     width: 100%;
-    height: 220px;               /* Biraz daha geniş alan tanıyalım */
-    object-fit: cover;           /* Oranı koruyarak taşmaları kırpar */
+    height: 220px;               
+    object-fit: cover;          
     border-radius: 10px;
     display: block;
-    margin: 0 auto 1rem auto;    /* Ortalamayı garantiler */
+    margin: 0 auto 1rem auto;    
 }
 
 

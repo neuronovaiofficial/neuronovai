@@ -11,7 +11,9 @@
     <div class="card-grid">
         {% for card in cards %}
         <div class="card">
+            {% if card.image %}
             <img src="{{ card.image.url }}" alt="{{ card.title }}" style="width:100%; border-radius:8px;">
+            {% endif %}
             <h4>{{ card.title }}</h4>
             <p>{{ card.description }}</p>
             {% if card.link %}
